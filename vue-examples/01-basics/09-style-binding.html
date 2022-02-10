@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue.js</title>
+    <script src="https://unpkg.com/vue@3.2.29"></script>
+</head>
+
+<body>
+    <div id="app">
+        <p :style="{ color: textColor, 'font-size': fontSize+'px' }">Lorem ipsum dolor sit, amet consectetur adipisicing
+            elit. Illo voluptatum animi facilis asperiores hic,
+            itaque aliquid exercitationem sit quasi adipisci dolore iste impedit officia nemo, veniam dignissimos
+            deleniti! Qui, dolorum.</p>
+        <p :style="pStyle">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos natus numquam amet eaque
+            repellat optio aliquam possimus nemo veritatis architecto alias, aut assumenda saepe mollitia ratione facere
+            ex laborum iure.</p>
+    </div>
+    <script>
+        const myApp = Vue.createApp({
+            data() {
+                return {
+                    textColor: 'blue',
+                    fontSize: 50,
+                    pStyle: {
+                        color: 'magenta',
+                        'font-size': '30px'
+                    }
+                }
+            }
+        })
+        myApp.mount('#app');
+    </script>
+</body>
+
+</html>
