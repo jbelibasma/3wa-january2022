@@ -5,7 +5,7 @@
     <router-link to="/contact">contact</router-link> -->
     <Navbar></Navbar>
   </div>
-  <router-view/>
+  <router-view class="container"/>
 </template>
 <script>
  import Navbar from '@/components/Navbar.vue'

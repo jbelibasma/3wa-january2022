@@ -24,7 +24,7 @@ export default {
           name:"jbeli basma",
           email:"jbelibasma22@gmail.com",
           phone:"58662695",
-          adress:{
+          address:{
             street:"lmsmjfg",
             city:"jfqhff",
 
@@ -32,27 +32,30 @@ export default {
         },
            {
           id:2,
-          name:"jbeli basma",
-          email:"jbelibasma22@gmail.com",
+          name:"jbeli hannen",
+          email:"jbelihannen22@gmail.com",
           phone:"58662695",
-          adress:{
+          address:{
             street:"lmsmjfg",
             city:"jfqhff",
         },
         },
            {
           id:3,
-          name:"jbeli basma",
-          email:"jbelibasma22@gmail.com",
+          name:"jbeli amal",
+          email:"jbeliamal22@gmail.com",
           phone:"58662695",
-          adress:{
+          address:{
             street:"lmsmjfg",
             city:"jfqhff",
 
         }
         }
-        ]
+        ],
+        
     }
-  }
+   
+  },
+ 
 }
 </script>
