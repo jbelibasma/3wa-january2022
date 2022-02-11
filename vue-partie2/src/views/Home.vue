@@ -2,23 +2,39 @@
   <div class="home">
     <!-- <img alt="Vue logo" src="../assets/logo.png">
     <HelloWorld msg="Welcome to Your Vue.js App"/> -->
-    <ContactList :list="contactList"></ContactList>
+    <!-- <ContactList :list="contactList"></ContactList> -->
+      <div class="demo">
+      <button
+        v-for="tab in tabs"
+        :key="tab"
+        :class="['tab-button', { active: currentTab === tab }]"
+        @click="currentTab = tab"
+      >
+        {{ tab }}
+      </button>
+      <component :is="currentTab" :list="contactList" @saveInfo="save" class="tab"></component>
+      </div>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
 import ContactList from '@/components/contactList.vue'
+import Addcontact from '@/components/Addcontact.vue'
+
 
 export default {
   name: 'Home',
   components:{
     ContactList, 
+    Addcontact,
   },
   
-  data(){
-    return{
-      contactList:[
+  data() {
+    return {
+      currentTab: 'ContactList',
+      tabs: ['ContactList','Addcontact'],
+       contactList:[
         {
           id:1,
           name:"jbeli basma",
@@ -52,9 +68,17 @@ export default {
         }
         }
         ],
+      methods:{
+        save(obj){
+            this.contactList=obj;
+
+           
+            
+        }
+    }
         
     }
-   
+    
   },
  
 }
